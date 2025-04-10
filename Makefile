@@ -1,7 +1,3 @@
-.PHONY: install
-install:
-	poetry install
-
 .PHONY: migrate
 migrate:
 	python manage.py migrate
