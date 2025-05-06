@@ -9,6 +9,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Pacifico&display=swap"
         rel="stylesheet">
+    {% if seller_user.sellerprofile.custom_css %}
+    <link rel="stylesheet" href="{{ seller_user.sellerprofile.custom_css.url }}">
+    {% endif %}
+
+
 </head>
 <style>
     .brand {
