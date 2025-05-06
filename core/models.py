@@ -31,7 +31,7 @@ class OrderItem(models.Model):
 class Invoice(models.Model):
     order = models.OneToOneField(Order, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-    file = models.FileField(upload_to='/invoices')
+    file = models.FileField(upload_to='invoices')
 
 class ShippingInfo(models.Model):
     order = models.OneToOneField(Order, on_delete=models.CASCADE)

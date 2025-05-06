@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+JWT_SECRET = 'super-secret-key'  # Keep this private
+JWT_ALGORITHM = 'HS256'
 
 # Application definition
 

@@ -12,6 +12,6 @@ super-user:
 
 .PHONY: run-server
 run-server:
-	python manage.py runserver
+	python manage.py runserver 8080
 
 update: install migrate ;
