@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto px-4 py-10">
+    <h2 class="text-3xl font-bold mb-6 text-center">🛒 Your Cart</h2>
+
+    {% if cart_items %}
+    <div class="space-y-4">
+        {% for item in cart_items %}
+        <div class="flex justify-between items-center bg-white shadow rounded-xl p-4">
+            <div>
+                <p class="text-lg font-semibold">{{ item.product.name }}</p>
+                <p class="text-sm text-gray-500">Qty: {{ item.quantity }} × ₹{{ item.product.price }}</p>
+            </div>
+            <div class="text-right font-bold text-gray-800">
+                ₹{{ item.total }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="mt-8 text-center">
+        <a href="{% url 'checkout' %}"
+            class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow transition duration-200">
+            Proceed to Checkout
+        </a>
+    </div>
+    {% else %}
+    <p class="text-center text-gray-600">Your cart is empty.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

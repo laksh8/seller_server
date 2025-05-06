@@ -1,4 +1,4 @@
-{% extends 'store/base.html' %}
+{% extends 'base.html' %}
 {% block title %}{{ product.name }}{% endblock %}
 
 {% block content %}
@@ -7,6 +7,6 @@
     <p class="mb-4 text-gray-700">{{ product.description }}</p>
     <p class="text-lg text-blue-600 font-semibold mb-2">Price: ₹{{ product.price }}</p>
     <p class="mb-4 text-gray-600">In Stock: {{ product.available_quantity }}</p>
-    <a href="{% url 'product_catalog' %}" class="inline-block text-blue-500 hover:underline">&larr; Back to Catalog</a>
+    <a href="/" class="inline-block text-blue-500 hover:underline">&larr; Back to Catalog</a>
 </div>
 {% endblock %}
